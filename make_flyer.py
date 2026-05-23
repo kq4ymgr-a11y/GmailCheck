@@ -78,7 +78,7 @@ add_textbox(slide, Cm(1), Cm(4.0), W - Cm(2), Cm(3.5),
 
 # ── 大きな虫の絵文字エリア ──
 add_textbox(slide, Cm(1), Cm(7.2), Cm(10), Cm(6),
-            "🐛\n🥚🌱",
+            "🐛",
             font_size=80, bold=False, color=(0, 0, 0))
 
 # ── 説明テキスト ──
@@ -113,14 +113,9 @@ for line in lines:
 # ── 下部：問い合わせ帯 ──
 add_rect(slide, 0, Cm(17.0), W, Cm(4.0), fill_color=(34, 120, 20))
 
-add_textbox(slide, Cm(1), Cm(17.2), W - Cm(2), Cm(1.2),
-            "【 お問い合わせ・お持ち帰り場所 】",
-            font_size=16, bold=True, color=(255, 255, 180))
-
-add_textbox(slide, Cm(1), Cm(18.5), W - Cm(2), Cm(2.2),
-            "📍 場所：玄関前に置いてあります　　📞 連絡先：kq4ymgr@gmail.com\n"
-            "🗓 期間：数がなくなり次第終了　　　🕐 お持ち帰り：いつでもどうぞ",
-            font_size=15, bold=False, color=(255, 255, 255))
+add_textbox(slide, Cm(1), Cm(17.5), W - Cm(2), Cm(3.0),
+            "岩瀬スポーツ公園管理事務所",
+            font_size=26, bold=True, color=(255, 255, 255))
 
 # ── 装飾：点線枠 ──
 border = add_rect(slide, Cm(0.4), Cm(3.7), W - Cm(0.8), Cm(12.9),
