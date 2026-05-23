@@ -76,10 +76,13 @@ add_textbox(slide, Cm(1), Cm(3.8), W - Cm(2), Cm(2.5),
             "ご自由にお持ちください！",
             font_size=44, bold=True, color=(34, 100, 10))
 
-# ── 左カラム：大きな虫の絵文字（y=6.6〜15.5） ──
-add_textbox(slide, Cm(1.5), Cm(6.6), Cm(9), Cm(8.5),
+# ── 左カラム：カブトムシ＆幼虫の絵文字（y=6.6〜15.5） ──
+add_textbox(slide, Cm(1.0), Cm(6.6), Cm(9.5), Cm(4.0),
+            "🪲",
+            font_size=90, bold=False, color=(0, 0, 0))
+add_textbox(slide, Cm(1.0), Cm(10.8), Cm(9.5), Cm(4.0),
             "🐛",
-            font_size=100, bold=False, color=(0, 0, 0))
+            font_size=90, bold=False, color=(0, 0, 0))
 
 # ── 右カラム：説明テキスト（y=6.6〜15.5） ──
 desc = (
