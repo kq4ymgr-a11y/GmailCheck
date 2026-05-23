@@ -71,29 +71,29 @@ tb = add_textbox(slide, Cm(0.5), Cm(0.2), W - Cm(1), Cm(3.0),
                  "🪲　カブトムシの幼虫　無料配布中　🪲",
                  font_size=32, bold=True, color=(255, 255, 255))
 
-# ── メインキャッチコピー ──
-add_textbox(slide, Cm(1), Cm(4.0), W - Cm(2), Cm(3.5),
+# ── メインキャッチコピー（上帯直下、全幅） ──
+add_textbox(slide, Cm(1), Cm(3.8), W - Cm(2), Cm(2.5),
             "ご自由にお持ちください！",
             font_size=44, bold=True, color=(34, 100, 10))
 
-# ── 大きな虫の絵文字エリア ──
-add_textbox(slide, Cm(1), Cm(7.2), Cm(10), Cm(6),
+# ── 左カラム：大きな虫の絵文字（y=6.6〜15.5） ──
+add_textbox(slide, Cm(1.5), Cm(6.6), Cm(9), Cm(8.5),
             "🐛",
-            font_size=80, bold=False, color=(0, 0, 0))
+            font_size=100, bold=False, color=(0, 0, 0))
 
-# ── 説明テキスト ──
+# ── 右カラム：説明テキスト（y=6.6〜15.5） ──
 desc = (
     "🌿  今年の夏、カブトムシを育ててみませんか？\n\n"
     "🪱  幼虫の状態でお渡しします（腐葉土入りカップ）\n\n"
     "🌳  お子様の自由研究や夏の思い出づくりに！\n\n"
     "📦  数に限りがありますのでお早めにどうぞ"
 )
-tb2 = slide.shapes.add_textbox(Cm(12), Cm(4.0), Cm(16.5), Cm(10))
-tf2 = tb2.text_frame
-tf2.word_wrap = True
 from pptx.util import Pt
 from pptx.dml.color import RGBColor as RGB
 
+tb2 = slide.shapes.add_textbox(Cm(11.5), Cm(6.6), Cm(17.0), Cm(9.0))
+tf2 = tb2.text_frame
+tf2.word_wrap = True
 lines = desc.split("\n")
 first = True
 for line in lines:
@@ -110,15 +110,15 @@ for line in lines:
     run.font.color.rgb = RGB(30, 80, 10)
     run.font.name = "BIZ UDPGothic"
 
-# ── 下部：問い合わせ帯 ──
-add_rect(slide, 0, Cm(17.0), W, Cm(4.0), fill_color=(34, 120, 20))
+# ── 下部：緑帯 ──
+add_rect(slide, 0, Cm(16.5), W, Cm(4.5), fill_color=(34, 120, 20))
 
-add_textbox(slide, Cm(1), Cm(17.5), W - Cm(2), Cm(3.0),
+add_textbox(slide, Cm(1), Cm(17.2), W - Cm(2), Cm(3.0),
             "岩瀬スポーツ公園管理事務所",
             font_size=26, bold=True, color=(255, 255, 255))
 
-# ── 装飾：点線枠 ──
-border = add_rect(slide, Cm(0.4), Cm(3.7), W - Cm(0.8), Cm(12.9),
+# ── 装飾：枠線 ──
+border = add_rect(slide, Cm(0.4), Cm(3.5), W - Cm(0.8), Cm(12.6),
                   line_color=(34, 120, 20), line_width=Pt(2))
 border.fill.background()
 
